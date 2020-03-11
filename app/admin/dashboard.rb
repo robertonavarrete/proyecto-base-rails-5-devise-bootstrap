@@ -17,9 +17,12 @@ ActiveAdmin.register_page "Dashboard" do
       panel 'comentarios' do
         ul do
           li "comentarios registrados: #{Comment.count}"
-        end
+          end
+      end
     end
-  end
+    panel "Gráfico" do
+      render 'shared/chart'
+    end
 end
 end
 end

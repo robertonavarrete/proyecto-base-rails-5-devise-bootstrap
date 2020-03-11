@@ -10,6 +10,8 @@ end
 gem 'rails', '~> 5.2.3'
 gem 'devise'
 gem 'activeadmin'
+gem 'chartkick'
+gem 'groupdate'
 gem 'font-awesome-sass', '~> 4.7.0'
 gem 'faker'
 # Use sqlite3 as the database for Active Record
