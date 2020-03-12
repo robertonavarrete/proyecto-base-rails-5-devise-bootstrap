@@ -6,13 +6,19 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-AdminUser.destroy_all
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+#AdminUser.destroy_all
+#AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
 
+
+# 10.times do |i|
+#     User.create!({
+#         email: "user_#{i}@gmail.com",
+#         password: '123456'}
+#     )
+# end
 
 10.times do |i|
-    User.create!({
-        email: "user_#{i}@gmail.com",
-        password: '123456'}
-    )
-end
+    Comment.create(
+    content: Faker::Lorem.paragraph,
+    created_at: Faker::Number.number(digits:1).to_i.day.ago)
+    end
